@@ -902,9 +902,10 @@ export default function App() {
                     Digite a senha administrativa para controlar o tema (escuro/claro), vídeos, textos e serviços.
                   </p>
                   <form onSubmit={handleAdminLogin} className="space-y-4">
+                    {/* SENHA SEGURA SEM EXIBIÇÃO NO PLACEHOLDER */}
                     <input
                       type="password"
-                      placeholder="Senha (padrão)"
+                      placeholder="Digite a senha de acesso"
                       value={passwordInput}
                       onChange={(e) => setPasswordInput(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-black border border-white/15 text-sm text-white text-center focus:outline-none focus:border-[#D4AF37]"
@@ -1163,7 +1164,6 @@ export default function App() {
                   {/* ABA 2: TEMA (ESCURO/CLARO), VÍDEO & LETRAS / TEXTOS */}
                   {adminTab === 'general' && (
                     <div className="space-y-6">
-                      {/* SEÇÃO DE TEMA: ESCURO OU CLARO */}
                       <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 space-y-3">
                         <h4 className="font-serif text-lg text-[#E5C158] flex items-center gap-2">
                           <Moon className="w-4 h-4" /> Aparência do Site (Tema Escuro / Claro)
@@ -1197,7 +1197,6 @@ export default function App() {
                         </div>
                       </div>
 
-                      {/* SEÇÃO DE VÍDEO & MARCA */}
                       <div className="space-y-4">
                         <h4 className="font-serif text-lg text-[#E5C158]">Vídeo de Fundo & Identidade</h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -1232,7 +1231,6 @@ export default function App() {
                         </div>
                       </div>
 
-                      {/* SEÇÃO DE LETRAS E TEXTOS DO SITE */}
                       <div className="space-y-4 pt-4 border-t border-white/10">
                         <h4 className="font-serif text-lg text-[#E5C158]">Edição de Textos e Letras do Site</h4>
                         
@@ -1298,7 +1296,6 @@ export default function App() {
                         </div>
                       </div>
 
-                      {/* CONTATO & SENHA */}
                       <div className="space-y-4 pt-4 border-t border-white/10">
                         <h4 className="font-serif text-lg text-[#E5C158]">Informações de Contato & Senha do Painel</h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
