@@ -904,7 +904,7 @@ export default function App() {
                   <form onSubmit={handleAdminLogin} className="space-y-4">
                     <input
                       type="password"
-                      placeholder="Senha (padrão: lumiere2026)"
+                      placeholder="Senha (padrão)"
                       value={passwordInput}
                       onChange={(e) => setPasswordInput(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-black border border-white/15 text-sm text-white text-center focus:outline-none focus:border-[#D4AF37]"
